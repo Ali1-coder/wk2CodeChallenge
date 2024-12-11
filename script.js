@@ -1,7 +1,13 @@
+//Storing in variables
 const btnAdd = document.querySelector(".add");
 const btnRemove = document.querySelector(".remove");
+
+//Event when Add btn clicked
 btnAdd.addEventListener("click", addItems);
+//Event when clear btn clicked
 btnRemove.addEventListener("click", removeItems);
+
+//function to add
 function addItems() {
   const input = document.querySelector("input");
   const items = input.value.trim();
@@ -16,6 +22,7 @@ function addItems() {
   document.querySelector(".items").appendChild(li);
   input.value = "";
 }
+//function to clear items
 function removeItems() {
   document.querySelector(".items").innerHTML = "";
 }
